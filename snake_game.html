@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game in Python by Venugopal</title>
+    <!-- <link rel="stylesheet" href="snake_game.css"> -->
+    <style>
+        body{
+    font-family: cursive;
+    /* background-color: rgb(201, 232, 252); */
+    background: url('webbg.jpg');
+     background-repeat: no-repeat;
+     background-size: 1265px 8500px;
+     position: absolute;
+}
+.heading{
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #79ffff;
+    /* background-color: rgb(247, 247, 202); */
+}
+.intro{
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 19px;
+}
+.python{
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 19px;
+}
+.pygame{
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    font-size: 19px;
+}
+.question{
+    color: lightcoral;
+
+}
+.downloadbtn{
+    font-size: 36px;
+    text-decoration: none; 
+    color: black;
+    /* This is to avoid the underline belo the button    */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: rgb(196, 229, 240);
+    padding:6px;
+    border: none;
+    cursor:pointer;
+    /* font-size: 13px; */
+    border-radius: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.downloadcodebtn{
+    font-size: 36px;
+    text-decoration: none; 
+    color: black;
+    /* This is to avoid the underline belo the button    */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: rgb(196, 229, 240);
+    padding:6px;
+    border: none;
+    cursor:pointer;
+    /* font-size: 13px; */
+    border-radius: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+.downloadbtn:hover{
+    font-size: 38px;
+    cursor: pointer;
+    color: rgb(220, 226, 236);
+    background-color: rgb(34, 111, 226);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.downloadcodebtn:hover{
+    font-size: 38px;
+    cursor: pointer;
+    color: rgb(220, 226, 236);
+    background-color: rgb(34, 111, 226);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.download{
+    text-align: center;
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+    
+
+}
+.code{
+    text-align: center;
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+.veiwcode{
+    text-align: center;
+}
+.pre{
+    font-weight: bold;
+    font-size: 19px;
+    color:greenyellow;
+    background-color: black;
+    padding-top: 38px;
+padding-bottom: 38px;
+    border-radius: 50px;
+    margin-left: 30px;
+margin-right: 30px;
+}
+.warning1{
+    padding-left: 45px;
+padding-right: 45px;
+padding-top: 30px;
+}
+.warning2{
+    padding-left: 45px;
+padding-right: 45px;
+padding-top: 30px;
+}
+.warning3{
+    padding-left: 45px;
+padding-right: 45px;
+padding-top: 30px;
+}
+.images{
+    width: 350px;
+    margin-left: 350px;
+    
+}
+.cheatcode{
+    padding-left: 45px;
+padding-right: 45px;
+padding-top: 30px;
+}
+#subscribe{
+    text-decoration: none;
+    font-size: 20px;
+    background-color:  rgb(196, 229, 240);
+    padding:19px;
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 500px;
+}
+#subscribe:hover{
+    cursor: pointer;
+    color: rgb(220, 226, 236);
+    background-color: rgb(34, 111, 226);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+    </style>
+</head>
+<body>
+    <div class="heading">
+        <h1  >SNAKE GAME IN PYTHON</h1>
+        <!-- <br> -->
+        <h2  >By VENUGOPAL BEDAR</h2>
+    </div>
+    <hr>
+    <div class="intro">
+        <p>     Hey there, I am <strong>Venugopal Bedar</strong> . Now I am studying in 8th standerd. I am living in Kranataka, India. And I have completed the course of <strong>Python Basics</strong> . That course helped me a lot! And now I am working on Pygame. and I am Successful in creating a simple snake game. Then I thought to share them with you.   </p>
+    </div>
+    <div class="python">
+        <h2 class="question">What is Python?</h2>
+        <P>Simple definition that I can give for python is "It is one of the <strong>Easiest Computer Programming Language"</strong>And it helps me a lot in reducing the length of the code. And the Syntax is very much similar as speeking  English. And its a <strong>High-Level Programming Language.</strong> </P>
+    </div>
+    <div class="pygame">
+        <h2 class="question">What is Pygame?</h2>
+        <p>Pygame is an <strong>External Module</strong> in Python. <strong>Module</strong>means lines of code written by others. And you need to install it separately as it is not pre-installed in Python. It helps much in creating games.</p>
+    </div>
+    <div class="snakegame" style="padding-left: 90px;
+    padding-right: 90px">
+        <h1 class="question">
+            What is Snake Game?
+        </h1>
+        <p>It is a popular game which is played by many people. But now it is not in trend. Anyhow, usually it is pre-installed in all keypad mobiles. We all played it in our childhood. In those days it is a great source of Entertainment and Timepass for us. We tried to break Hiscores.</p>
+        <p>In our game, there will be a Game Window, in which the game will executes. There will be a small snake and an apple whic is located on a random location on the Game Window. We have to control the snake by pressing Up arrow, Down arrow, Right arrow and left arroe buttons of our keyboard and try to overlap the head of the snake by the apple as we are feeding the snake. As we feed the snake The length of the snak will increases and the apple again locates at an random location of our game window. The Game Over function will returns true either if the head of the snake overlaps the body of the snake as it has bited itself or when the hea of the snake meets the border of the game window as it has hitted to the wall</p>
+    </div>
+    <div style="padding-left: 90px;
+    padding-right: 90px">
+        <p class="list">1.This is Welcome Window</p>
+        <img class="images" src="welcomewindow.jpg" alt="Error loading image..." >
+        <br>
+        <p class="list">2. This is the picture when you are playing game. your score and hiscore will be displayed on the top-left corner of the window. If your score will become greater than hiscore, then the HighScoreOfSnakeGame.txt will be updated and your Hiscore will be returned.</p>
+        <img class="images" src="snakegame.jpg" alt="Error loading image...">
+        <br>
+        <p class="list">
+            3. This is Game Over Window.
+
+        </p>
+        <img class="images" src="gameover.jpg" alt="Error loading image...">
+    </div><br><hr><br>
+    <div class="download">
+        <h1 class="question">Download my Snake Game</h1>
+        <p>I made a zip file and included all the elements of my game. Kindly extract the zip file and open the file Snake_Game_by_Venugopal.exe and file size is just 13 MB</p><br><br>
+        <a class="downloadbtn" href="https://drive.google.com/file/d/1nggnG3y5vHdolpAlQa789p1JkGBjJBsF/view?usp=sharing" target="_blank">
+            DOWNLOAD
+        </a>
+    </div><br><hr><br>
+    <div class="code">
+        <h1 class="question">Download Source Code</h1>
+        <p>Here you can download the code of python and some additional files like background image, Highscore and cheat code. For running this make sure that you are svaing the files in a same directory. Otherwise program won't work</p><br><br>
+        <a class="downloadcodebtn" href="https://drive.google.com/drive/folders/1fr6qrNWfFAb9cNsh3Z3ii7-lIAnodBQs?usp=sharing" target="_blank">
+            DOWNLOAD
+        </a>    
+    </div><hr>
+    <div class="veiwcode">
+        <h1 class="question">View Source Code</h1>
+        <p>This is Source code copied from my IDE. I will provide Additional files as well below</p>
+        
+    </div>
+    <div class="sourcecode">
+        <p>
+<pre class="pre">
+    import pygame
+    import random
+    import os
+    
+    pygame.mixer.init()
+    pygame.init()
+    # colors
+    white = (255, 255, 255)
+    red = (255, 0, 0)
+    black = (0, 0, 0)
+    grey = (110, 110, 110)
+    light_blue = (110, 189, 241)
+    dark_blue = (0, 93, 155)
+    # diplay area
+    screen_width=900
+    screen_height=500
+    gameWindow = pygame.display.set_mode((screen_width, screen_height))
+    
+    #Background Image
+    bgimg = pygame.image.load("snakebg.jpg")
+    bgimg = pygame.transform.scale(bgimg, (screen_width, screen_height)).convert_alpha()
+    # game title
+    pygame.display.set_caption("Snake by VENUGOPAL")
+    pygame.display.update()
+    
+    clock = pygame.time.Clock()
+    font = pygame.font.SysFont(None, 55)
+    
+    
+    def text_screen(text, color, x, y):
+        screen_text = font.render(text, True, color)
+        gameWindow.blit(screen_text, [x,y])
+    
+    def plot_snake(gameWindow, color, snk_list, snake_size):
+        # print(snk_list)
+        for x,y in snk_list:
+            pygame.draw.rect(gameWindow, color, [x, y, snake_size, snake_size])
+    
+    def welcome():
+        exit_game = False
+        while not exit_game:
+            gameWindow.fill(white)
+            text_screen("Welcome To SNAKES by Venugopal", light_blue, 110, 190)
+            text_screen("Press ENTER to start",grey , 230, 250)
+            # text_screen("Hiscore: " + hiscore ,grey , 230, 250)
+            for event in pygame.event.get():
+                if event.type==pygame.QUIT:
+                    exit_game=True
+                if event.type==pygame.KEYDOWN:
+                    if event.key==pygame.K_RETURN:
+                        # pygame.mixer.music.load('F:\HP\Music\Jarico - Landscape [NCS BEST OF].mp3')
+                        # pygame.mixer.music.play(-1)
+                        gameloop()
+            pygame.display.update()
+            clock.tick(50)
+    
+    # game loop
+    def gameloop():
+        
+            # Game specific varialbles
+        exit_game = False
+        game_over = False
+        snake_x = 45
+        snake_y = 55
+        snake_size = 20
+        fps= 20
+        velocity_x = 0
+        velocity_y = 0
+        food_x = random.randint(40,screen_width-40)
+        food_y = random.randint(40,screen_height-40)
+        food_size = 20
+        score = 0
+    
+        snk_list = []
+        snk_length = 1
+        # check if hiscore file exists
+        
+        with open("HighScoreOfSnakeGame.txt","r") as f:
+            hiscore = f.read()
+        
+        while not exit_game:
+            if game_over:
+                with open("HighScoreOfSnakeGame.txt","w") as f:
+                    f.write(str(hiscore))
+                gameWindow.fill(white)
+                text_screen(f'''Game Over! Press enter to continue''', red, 100, 200)
+                text_screen("Score: " + str(score) + "  Hiscore : " + str(hiscore),red, 5,5)
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        exit_game = True
+                    if event.type == pygame.KEYDOWN:
+                        if event.key==pygame.K_RETURN:  
+                            welcome()  
+            else:    
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        exit_game = True
+                    if event.type == pygame.KEYDOWN:
+                        if event.key==pygame.K_RIGHT:
+                            velocity_x = 7 
+                            velocity_y = 0   
+                        elif event.key==pygame.K_LEFT:
+                            velocity_x = -7    
+                            velocity_y = 0
+                        elif event.key==pygame.K_UP:
+                            velocity_y =  -7 
+                            velocity_x = 0   
+                
+                        elif event.key==pygame.K_DOWN:
+                            velocity_y = 7
+                            velocity_x = 0 
+                        # Below is cheat code    
+                        elif event.key==pygame.K_h:
+                            score+=5       
+                
+                snake_x = snake_x + velocity_x
+                snake_y = snake_y + velocity_y
+    
+                if abs(snake_x - food_x)<20 and abs(snake_y - food_y)<20:
+                    score +=10
+                    # print("Score: ", score * 10)
+                    food_x = random.randint(20, screen_width-10)
+                    food_y = random.randint(20, screen_height-10)
+                    snk_length += 8
+                    if score>int(hiscore):
+                        hiscore = score
+    
+                gameWindow.fill(white)
+                gameWindow.blit(bgimg, (0, 0))
+                text_screen("Score: " + str(score) + "  Hiscore : " + str(hiscore),dark_blue, 5,5)
+                pygame.draw.rect(gameWindow, red, [food_x, food_y, food_size, food_size])
+    
+                head= []
+                head.append(snake_x)
+                head.append(snake_y)
+                snk_list.append(head)
+    
+                if len(snk_list)>snk_length:
+                    del snk_list[0]
+    
+                if head in snk_list[:-1]:
+                    game_over = True    
+    
+    
+                if snake_x<0 or snake_x>screen_width or snake_y<0 or snake_y>screen_height:
+                    game_over=True
+                    # print("Game Over")
+                # pygame.draw.rect(gameWindow, black, [snake_x, snake_y, snake_size, snake_size])
+                plot_snake(gameWindow, black, snk_list, snake_size)
+            pygame.display.update()
+            clock.tick(fps)
+    
+    
+        pygame.quit()
+        quit()
+    welcome()    
+    # gameloop()                    
+</pre></p>
+    </div> 
+    <div class="warning1" >
+        <h2 style="color: #18eaa5;">Warning:</h2>
+        <p>While running this code in your IDE make sure that you have installed the Pygame Module. Otherwise install the latest version of Python in your computer and in your Powershell type <strong>pip install pygame </strong> and hit enter(Make sure your are connected to internet). Then it will download a file of 5MB. Afterwards you can import it in your code and you can use.</p>
+    </div>  
+    <div class="snakebg">
+        <img src="snakebg.jpeg" alt="Error loading image..." style="margin-left: 246px;margin-top:53px">
+    </div> 
+    <div class="warning2">
+        <h2 style="color:#18eaa5;">Warning</h2>
+        <p>Save the Image as <strong>snakebg</strong> and svae it in <strong>jpeg</strong> file type. And make sure that you are svaing the iamge in the same directory where the python file of source code is saved. Otherwise program will throw an Error.</p>
+    </div>
+    <div class="hiscore">
+        <img src="hiscore.jpg" alt="Error loading image..." style="width: 816px;
+        margin-left: 216px;">
+    </div>
+    <div class="warning3">
+        <h2 style="color: #18eaa5;">
+            Warning
+        </h2>
+        <p>Create a new <strong>Text Document (.txt)</strong> named as <strong>HighScoreOfSnakeGame.</strong> That file is updated when you play a game. And it will store hiscore in it. You can change the hiscore just by editing that file. </p>
+    </div><br><br>
+    <div class="cheatcode">
+        <h1 style="color: #18eaa5;">
+            Cheat Code 
+        </h1>
+        <p>The game has a cheat code. If you want then you have to check the file cheat_code.txt But dont reveal it.</p>
+    </div>
+    <div class="youtube">
+        <h1 style="text-align: center;color: ivory;">SUBSCRIBE me on YouTube</h1><br>
+        <a id="subscribe" href="https://www.youtube.com/channel/UC3_q6mqR12CRp3nUGsS_XVw" target="_blank">Visit YouTube Channel</a>
+    </div><br><br><br><br><br><br><br>
+</body>
+</html>
